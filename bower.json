@@ -1,0 +1,20 @@
+{
+  "name": "jsbootcamp1",
+  "version": "0.0.0",
+  "homepage": "https://github.com/deanwenick/jsbootcamp1",
+  "description": "classword",
+  "keywords": [
+    "js"
+  ],
+  "authors": [
+    "dean wenick"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
