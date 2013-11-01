@@ -27,5 +27,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks( 'grunt-contrib-clean');
 
   //default tasks for grunt
+  //* add jshint to this list *//
   grunt.registerTask( 'default', ['clean','copy']);
 };
