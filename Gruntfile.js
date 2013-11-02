@@ -18,18 +18,14 @@ module.exports = function(grunt) {
 
     clean: ['public/bower_components/**'],
 
-    mocha_phantomjs: {
-    	all: ['tests/test01.js']
-    },
-
-    mocha: {
-      index: ['tests/test01.js']
-    },
-
     mochaTest: { test: { 
 		options: {reporter: 'spec'},
 		src: ['tests/test01.js']
-    }}
+    }},
+
+    nodemon: {
+    	dev: {}
+    }
   });//initConfig
 
   //load jshint plugin for cleaning js files
@@ -38,13 +34,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks( 'grunt-contrib-copy' );
   //load clean plugin to clean bower components folder
   grunt.loadNpmTasks( 'grunt-contrib-clean' );
-  grunt.loadNpmTasks( 'grunt-mocha-phantomjs' );
-  grunt.loadNpmTasks( 'mocha' );
+  //load testing plugin
   grunt.loadNpmTasks( 'grunt-mocha-test' );
+  //load automator for starting/stopping server when files updated
+  //grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks( 'grunt-nodemon' );
 
   //default tasks for grunt
-  //* add jshint to this list *//
-  //
   grunt.registerTask( 'default', ['jshint','clean','copy']);
   grunt.registerTask('test', ['mochaTest']);
+  grunt.registerTask('restart', ['nodemon']);
 };

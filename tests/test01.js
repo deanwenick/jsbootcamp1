@@ -15,7 +15,7 @@ describe('Array', function(){
         assert.equal("a","a");
     });
 
-    it("should return that each string is the same", function() {
+    it("should return that each number is the same", function() {
         assert.equal(100,100);
     });
   })
