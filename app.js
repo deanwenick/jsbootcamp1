@@ -87,6 +87,8 @@ app.get("/contacts/:guid", function(req, res) {
   }
 });
 
+//here we handle user input to the contact record, update the db and redirect back to
+//the contactlist page to display the list including the updated record
 app.post("/contacts/:guid", function(req, res) {
   var guid = req.param("guid"),
       record = _.findWhere(db, {guid: guid});
@@ -103,6 +105,25 @@ app.post("/contacts/:guid", function(req, res) {
   }
 });
 
+//route to new view - form to add new information
+app.get("/add", function(req, res) {
+  res.render("add");
+});
+
+//route to success page - used when new record is added via add page
+app.get("/success", function(req, res) {
+  res.render("success");
+});
+
+//here we take data from the add page and make a new record in the db
+//then redirect to a success page showing the new record
+app.post("/add", function(req, res) {
+  var formValues = _.pick(req.body, "firstName", "lastName", "nickname", "company", "email");
+  //add data to db here
+
+  //deal with empty nickname here by moving process to a function
+  res.redirect("/success");
+});
 
 // With the express server and routes defined, we can start to listen
 // for requests. Heroku defines the port in an environment variable.
