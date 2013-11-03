@@ -5,6 +5,8 @@
 
     <!-- Bring In jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- bring in form validation -->
+    <script src="../js/jquery.validate.js"></script>
 
     <!-- Bring In Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -45,7 +47,7 @@
 
           <div class="form-group">
             <label for="email">Email Addr</label>
-            <input type="text" class="form-control" id="email" name="email" placeholder="Email Addrress" value="{{email}}"/>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Email Addrress" value="{{email}}" required/>
           </div>
 
         <button type="submit" class="btn btn-default">Submit</button>

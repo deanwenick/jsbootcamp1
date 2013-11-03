@@ -5,6 +5,9 @@
 
     <!-- Bring In jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- bring in form validation -->
+    <script src="../js/jquery.validate.js"></script>
+
 
     <!-- Bring In Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -12,7 +15,7 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
     <!-- Application Styles and Scripts -->
-    <link rel="stylesheet" href="/jsbootcamp.css">
+    <link rel="stylesheet" href="../css/jsbootcamp.css">
   </head>
 
   <body>
@@ -44,12 +47,17 @@
 
           <div class="form-group">
             <label for="email">Email Addr</label>
-            <input type="text" class="form-control" id="email" name="email" placeholder="Email Addrress" value="{{email}}"/>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Email Addrress" value="{{email}}" required/>
           </div>
         {{/with}}
 
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+
     </div>
+
+    <script type="text/javascript">
+      $( "#commentForm" ).validate();
+    </script>
   </body>
 </html>
