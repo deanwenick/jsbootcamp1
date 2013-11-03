@@ -8,3 +8,11 @@ header {
 	background-image: url("../images/sprinkles.png");
 	padding: 1em;
 }
+h2 {
+	font-style: italic;
+	font-size: 100%;
+}
+th {
+	font-variant: small-caps;
+	color: maroon;
+}
