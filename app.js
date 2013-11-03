@@ -61,6 +61,14 @@ var db = [
     nickname: "Diamond Joe",
     company: "Mayor of Springfield",
     email: "jquimby@springfield.gov"
+  },
+  {
+    guid: "new",
+    firstName: "",
+    lastName: "",
+    nickname: "",
+    company: "",
+    email: ""
   }
 ];
 
@@ -115,14 +123,17 @@ app.get("/success", function(req, res) {
   res.render("success");
 });
 
-//here we take data from the add page and make a new record in the db
-//then redirect to a success page showing the new record
+// here we take data from the add page and make a new record in the db
+// then redirect to a success page showing the new record
 app.post("/add", function(req, res) {
-  var formValues = _.pick(req.body, "firstName", "lastName", "nickname", "company", "email");
-  //add data to db here
-
+  // var formValues = _.pick(req.body, "firstName", "lastName", "nickname", "company", "email");
+  // var record = _.findwhere(db, {guid: guid});
+  // //add data to db here
+  // _.extend(record, formValues);
   //deal with empty nickname here by moving process to a function
   res.redirect("/success");
+
+  console.log(guid);//why does this not work?
 });
 
 // With the express server and routes defined, we can start to listen

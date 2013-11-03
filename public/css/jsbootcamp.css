@@ -1,0 +1,10 @@
+@import url("font-awesome.css");
+
+body {
+  padding: 1em 1.5em 1em 1.5em;
+}
+
+header {
+	background-image: url("../images/sprinkles.png");
+	padding: 1em;
+}
