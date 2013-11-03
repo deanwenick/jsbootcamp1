@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Code Fellows Contact Manager</title>
+    <title>Wenick, Dean - First CF project</title>
 
     <!-- Bring In jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/jquery.tablesorter.js"></script>
 
     <!-- Bring In Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -12,11 +13,14 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
     <!-- Application Styles and Scripts -->
-    <link rel="stylesheet" href="/jsbootcamp.css">
-    <script src="/contactlist.js"></script>
+    <link rel="stylesheet" href="../css/jsbootcamp.css">
+    <script src="../js/contactlist.js"></script>
     <script>
       $(document).ready(function() {
         makeContactRowClickable();
+
+        //make table sortable
+        $('table').tablesorter();
       });
     </script>
   </head>
@@ -24,6 +28,7 @@
   <body>
     <header>
       <h1>Dean Wenick Assignment First Project <i class="fa fa-smile-o"></i></h1>
+      <h2>you can sort this table by clicking on the column headers</h2>
     </header>
     <table class="table table-hover">
       <thead>
