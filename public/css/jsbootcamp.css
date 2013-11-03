@@ -3,6 +3,9 @@
 body {
   padding: 1em 1.5em 1em 1.5em;
 }
+td {
+	padding: .5em 1em;
+}
 
 header {
 	background-image: url("../images/sprinkles.png");
@@ -15,4 +18,6 @@ h2 {
 th {
 	font-variant: small-caps;
 	color: maroon;
+	padding: .5em 1em;
+	text-align: left;
 }

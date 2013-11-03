@@ -77,10 +77,10 @@ var db = [
 // understands and associate a handler function with them. Express takes
 // care of everything else for us.
 app.get("/", function(req, res) {
-  res.redirect("/contacts");
+  res.redirect("/contactlist");
 });
 
-app.get("/contacts", function(req, res) {
+app.get("/contactlist", function(req, res) {
   res.render("contactlist", {contacts: db});
 });
 
