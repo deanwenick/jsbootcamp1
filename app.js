@@ -84,7 +84,7 @@ app.get("/contactlist", function(req, res) {
   res.render("contactlist", {contacts: db});
 });
 
-app.get("/contacts/:guid", function(req, res) {
+app.get("/contactlist/:guid", function(req, res) {
   var guid = req.param("guid"),
       record = _.findWhere(db, {guid: guid});
 
@@ -97,7 +97,7 @@ app.get("/contacts/:guid", function(req, res) {
 
 //here we handle user input to the contact record, update the db and redirect back to
 //the contactlist page to display the list including the updated record
-app.post("/contacts/:guid", function(req, res) {
+app.post("/contactlist/:guid", function(req, res) {
   var guid = req.param("guid"),
       record = _.findWhere(db, {guid: guid});
 
@@ -107,7 +107,7 @@ app.post("/contacts/:guid", function(req, res) {
     if(record.nickname === "") {
       record.nickname = record.firstName;
     }
-    res.redirect("/contacts");
+    res.redirect("/contactlist");
   } else {
     res.send("Sorry, the guid " + guid + " doesn't exist in the DB.");
   }
