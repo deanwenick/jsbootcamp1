@@ -12,9 +12,11 @@
     <!-- Bring In Bootstrap -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-
     <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <!-- animo -->
+    <script src="/bower_components/animo.js/animo.js" type="text/javascript"></script>
+    <link href="/bower_components/animo.js/animate+animo.css" rel="stylesheet" type="text/css">
 
     <!-- Application Styles and Scripts -->
     <link rel="stylesheet" href="../css/jsbootcamp.css">
@@ -61,10 +63,12 @@
 
     <script>
       $(document).ready(function() {
-
+        var area = $('input');
         $( '#commentForm' ).validate();
         $( 'input' ).focus( function() {
             $( this ).addClass( 'pinkBG' );
+
+            $('i').animo( { animation: 'bounce' } );
         });
 
         $( 'input' ).blur( function() {
